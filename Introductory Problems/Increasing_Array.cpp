@@ -11,25 +11,25 @@ using namespace std;
 #define no  cout << "NO\n"
 
 typedef pair<int,int> pii;
-typedef vector<int> vi;
+typedef vector<ll> vi;
 typedef vector<pii> vpi;
 
 
 
 void solve() {
     // your code here
-    ll n;
+    int n;
     cin >> n;
-    while(true){
-        cout << n << " ";
-        if(n == 1) break;
-        if(n & 1){
-            n = n * 3 + 1;
-        }else{
-            n = n / 2;
+    vi a(n);
+    for(auto &x : a) cin >> x;
+    ll op = 0;
+    for(int i = 1; i < n; i++){
+        if(a[i] < a[i - 1]){
+            op += a[i - 1] - a[i];
+            a[i] = a[i - 1]; 
         }
     }
-    cout << "\n";
+    cout << op << "\n";
 }
 
 signed main() {
@@ -39,6 +39,6 @@ signed main() {
     int t = 1;
     // cin >> t;         
     while (t--) solve();
-    
+
     return 0;
 }

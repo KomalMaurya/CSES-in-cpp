@@ -18,18 +18,18 @@ typedef vector<pii> vpi;
 
 void solve() {
     // your code here
-    ll n;
-    cin >> n;
-    while(true){
-        cout << n << " ";
-        if(n == 1) break;
-        if(n & 1){
-            n = n * 3 + 1;
-        }else{
-            n = n / 2;
-        }
+    // int n;
+    // cin >> n;
+    string s;
+    cin >> s;
+    int mx = 1, cnt = 1;
+    for(int i = 1; i < sz(s); i++){
+        if(s[i] == s[i - 1])
+            cnt++;
+        else cnt = 1;
+        mx = max(mx, cnt);
     }
-    cout << "\n";
+    cout << mx << "\n";
 }
 
 signed main() {
@@ -39,6 +39,6 @@ signed main() {
     int t = 1;
     // cin >> t;         
     while (t--) solve();
-    
+
     return 0;
 }
