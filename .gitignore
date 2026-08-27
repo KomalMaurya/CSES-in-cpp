@@ -6,3 +6,6 @@
 
 # Binary files
 *.bin
+
+# VS Code
+**/.vscode/
