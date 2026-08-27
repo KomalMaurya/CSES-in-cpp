@@ -1,5 +1,8 @@
 # macOS
 .DS_Store
 
+# Competitive Programming Helper
+.cph/
+
 # Binary files
 *.bin
