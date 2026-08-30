@@ -20,20 +20,9 @@ void solve() {
     // your code here
     ll a, b;
     cin >> a >> b ;
-    if(a == b){
-        if(a > 2 || a == 0){
-            yes;
-        }else{
-            no;
-        }
-    }else{
-        if(a == 2LL * b || b == 2LL * a){
-            yes;
-        }else{
-            no;
-        }
-    }
-    
+    if((a + b) % 3 == 0 && a <= 2 * b && b <= 2 * a){
+        yes;
+    }else no;
 }
 
 signed main() {
