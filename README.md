@@ -4,7 +4,7 @@ Welcome to my repository where I am solving all the **CSES Problem Set** problem
 
 ## 📑 CSES Topics
 
-1. **Introductory Problems** - 10/24 
+1. **Introductory Problems** - 12/24 
 2. **Sorting and Searching** - 2/35 
 3. **Dynamic Programming** - 1/23 
 4. **Graph Algorithms** - 0/36
