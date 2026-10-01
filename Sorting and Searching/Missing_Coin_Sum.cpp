@@ -24,18 +24,12 @@ void solve() {
     for(auto &x : a) cin >> x;
     set<ll> st;
     sort(all(a));
+    ll res = 1;
     for(int i = 0; i < n ; i++){
-        ll sum = 0;
-        for(int j = i ; j < n; j++){
-            sum += a[j];
-            st.insert(sum);
-        }
+        if(a[i] > res) break;
+        res += a[i];
     }
-    ll i = 1;
-    while(st.find(i) != st.end()){
-        i++;
-    }
-    cout << i << "\n";
+    cout << res << "\n";
 }
 
 signed main() {
