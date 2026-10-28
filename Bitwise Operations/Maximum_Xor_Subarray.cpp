@@ -23,11 +23,14 @@ void solve() {
     vi a(n);
     for(auto &x : a) cin >> x;
     ll sum = 0, res = 0;
-    for(int i = 0; i < n; i++){
-        sum = max(sum ^ a[i] , a[i]);
-        res = max(sum, res);
+    vi pref(n);
+    ll mx = a[0];
+    pref[0] = a[0];
+    for(int i = 1; i < n; i++){
+        mx = max(mx ^ a[i], pref[i - 1] ^ a[i]);
+        pref[i] = max(mx, pref[i]);
     }
-    cout << res << "\n";
+    cout << *max_element(all(pref)) << "\n";
 }
 
 signed main() {
